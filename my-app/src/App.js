@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './Home';
-import Soma from './Soma';
 // import HelloWorld from './HelloWorld';
 // import HelloWorld2 from './HelloWorld2';
 // import TesteClasse from './TesteClasse';
@@ -29,9 +28,9 @@ const App = () => {
     return(
       <div>
          <Home/>
-         <Soma n1={3} n2={5} />
       </div>
     )
   } 
-
+// DEVER DE CASA: FAZER UM COMPONENTE QUE RECEBA OS DADOS DO COMPONENTE PAI,
+// SENDO Q VAI RETORNAR UMA SOMA DOS DADOS, OU SEJA, USE PROPS E SOME-AS
 export default App;
