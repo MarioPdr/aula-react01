@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Contador from './components/Contador';
 import TrocaTexto from './components/TrocaTexto';
 import ExibirNome from './components/ExibirNome';
+import MudancaCor from './components/MudancaCor';
 // import HelloWorld from './HelloWorld';
 // import HelloWorld2 from './HelloWorld2';
 // import TesteClasse from './TesteClasse';
@@ -34,6 +35,7 @@ const App = () => {
          <Contador />
          <TrocaTexto />
          <ExibirNome />
+         <MudancaCor />
       </div>
     )
   } 
