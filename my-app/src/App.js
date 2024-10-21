@@ -1,5 +1,5 @@
 import './App.css';
-import Dogs from './Aula 5/Dogs';
+import Grid from './Deveres/Dever 5/Grid';
 /*
 function App() {
   return (
@@ -23,7 +23,7 @@ const App = () => {
     return(
       <div>
       {/* <Greeting name='Pedro' age={23} telephone='99999-9999' address='dasdasda, 230, RJ' isStudent={true} /> */}
-      <Dogs />
+      <Grid />
       </div>
     )
   } 
