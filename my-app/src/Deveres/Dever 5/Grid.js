@@ -1,45 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Personagem from './Personagem';
 import './Grid.css';
 
 function Grid() {
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [character, setCharacter] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch('https://swapi.dev/api/people/')
+  const fetchRandomCharacter = () => {
+    const randomId = Math.floor(Math.random() * 83) + 1; // API tem 83 personagens
+    setLoading(true);
+    setError(null);
+    fetch(`https://swapi.dev/api/people/${randomId}/`)
       .then(response => response.json())
       .then(data => {
-        setCharacters(data.results);
+        setCharacter(data);
         setLoading(false);
         setError(false);
       })
       .catch(error => {
-        console.error('Erro ao buscar personagens', error);
+        console.error('Erro ao buscar personagem', error);
         setError(true);
         setLoading(false);
       });
-  }, []);
-
-  const renderCharacters = () => {
-    const characterElements = [];
-    for (let i = 0; i < characters.length; i++) {
-      characterElements.push(
-        <Personagem character={characters[i]} />
-      );
-    }
-    return characterElements;
   };
 
   return (
     <div className="grid">
+      <button onClick={fetchRandomCharacter}>Buscar Personagem Aleatório</button>
       {loading ? (
-        <p>Loading...</p>
+        <p>Carregando...</p>
       ) : error ? (
-        <p>Erro ao carregar personagens</p>
+        <p>Erro ao carregar personagem</p>
       ) : (
-        renderCharacters()
+        character && <Personagem character={character} />
       )}
     </div>
   );
