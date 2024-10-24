@@ -1,7 +1,8 @@
 import './App.css';
-import ListaDeNomes from './components/Aula 6/ListaNomes';
-/*
-function App() {
+import Grid from './Deveres/Dever 6/Grid'
+
+
+/*function App() {
   return (
     <div className="App">
         <HelloWorld/>
@@ -9,21 +10,12 @@ function App() {
     </div>
   );
 } */
-/*
-const App = () => {
-  return(
-    <div>
-       <TesteClasse />
-       <TesteFuncao />
-    </div>
-  )
-} */
 
   const App = () => {
     return(
       <div>
       {/* <Greeting name='Pedro' age={23} telephone='99999-9999' address='dasdasda, 230, RJ' isStudent={true} /> */}
-      <ListaDeNomes />
+      <Grid />
       </div>
     )
   } 

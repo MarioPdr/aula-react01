@@ -3,7 +3,7 @@ import InputComponent from './InputComponent';
 const FormularioPai = () =>{
     const [formData, setFormData] = React.useState({ name:'', email: '' });
 
-    const handleCahnge = (e) =>{
+    const handleChange = (e) =>{
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -13,14 +13,14 @@ const FormularioPai = () =>{
                 label='name'
                 name="name"
                 value={formData.name}
-                onChange={handleCahnge}
+                onChange={handleChange}
              />
 
             <InputComponent 
                 label='email'
                 name="email"
                 value={formData.email} 
-                onChange={handleCahnge}
+                onChange={handleChange}
              />
         </div>
     );

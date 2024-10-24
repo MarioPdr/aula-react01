@@ -3,18 +3,18 @@ import Personagem from './Personagem';
 import './Grid.css';
 
 function Grid() {
-    const [character, setCharacter] = useState(null);
+    const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const fetchRandomCharacter = () => {
-        const randomId = Math.floor(Math.random() * 83) + 1; // API tem 83 personagens
+        const randomId = Math.floor(Math.random() * 83) + 1; 
         setLoading(true);
         setError(null);
         fetch(`https://swapi.dev/api/people/${randomId}/`)
             .then(response => response.json())
             .then(data => {
-                setCharacter(data);
+                setCharacters([...characters, data]); 
                 setLoading(false);
                 setError(false);
             })
@@ -34,7 +34,9 @@ function Grid() {
                 ) : error ? (
                     <p>Erro ao carregar personagem</p>
                 ) : (
-                    character && <Personagem character={character} />
+                    characters.map((character, index) => (
+                        <Personagem key={index} character={character} />
+                    ))
                 )}
             </div>
         </div>
