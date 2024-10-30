@@ -1,26 +1,25 @@
-import './App.css';
-import Grid from './Deveres/Dever 6/Grid'
+import React from "react";
+//import { Provider } from "react-redux";
+//import  store  from "./components/Aula 7 (parte 1)/store";
+//import Counter from "./components/Aula 7 (parte 1)/Counter";
+import StyledButton from "./components/Aula 7/StyledButton";
+import ProgressCircle from "./components/Aula 7/ProgressCircle";
+import { CircularProgress } from "@mui/material";
 
-
-/*function App() {
+export const App = () => {
   return (
-    <div className="App">
-        <HelloWorld/>
-        <HelloWorld2/>
-    </div>
-  );
-} */
+    //<Provider store={store}>
+    //  <Counter />
+    // </Provider>
 
-  const App = () => {
-    return(
-      <div>
-      {/* <Greeting name='Pedro' age={23} telephone='99999-9999' address='dasdasda, 230, RJ' isStudent={true} /> */}
-      <Grid />
-      </div>
-    )
-  } 
+
+    // 
+    <div>
+      <StyledButton />
+      <CircularProgress />
+    </div>
+
+  );
+}
 
 export default App;
-
-
-
