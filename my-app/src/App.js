@@ -1,18 +1,30 @@
-import React from "react";
-import { Provider } from "react-redux";
-import store from "./Deveres/Dever 7/store";
-import Counter from "./Deveres/Dever 7/Counter"; 
-import Grid from "./Deveres/Dever 7/Grid"; 
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } 
+from 'react-router-dom';
+import Home from './components/Aula 8/Home';
+import Users from './components/Aula 8/Users';
+import UserDetail from './components/Aula 8/UserDetail';
 
-export const App = () => {
+function App() {
   return (
-    <Provider store={store}>
+    <Router>
       <div>
-        <Counter /> 
-        <Grid />
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/users">Users</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<Users />}>
+            {/* Rota Aninhada - usando parametros na URL */}
+            <Route path=":userId" element={<UserDetail />} />
+          </Route>
+          {/* Redirecionamento em caso de rota vazia ou não
+          existente */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </div>
-    </Provider>
+    </Router>
   );
-};
+}
 
 export default App;
