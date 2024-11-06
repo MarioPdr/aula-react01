@@ -1,4 +1,3 @@
-// components/Users.js
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 function Users() {
