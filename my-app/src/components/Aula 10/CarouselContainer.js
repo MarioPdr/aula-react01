@@ -1,5 +1,3 @@
-import React from "react";
-import CarouselComponent from "./CarouselComponent";
 import React from 'react';
 import '../Aula 10/style.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
