@@ -62,7 +62,7 @@ function FormularioContato() {
                   />
                 </Grid>
               </Grid>
-              <Box mt={2}>
+              <Box mt={2} mb={4}>
                 <Button variant="contained" color="primary" type="submit">
                   Enviar
                 </Button>

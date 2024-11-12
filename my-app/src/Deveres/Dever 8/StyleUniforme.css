@@ -1,0 +1,13 @@
+.uniforme-container {
+    display: flex;
+    justify-content: center;
+}
+
+.uniforme-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+}

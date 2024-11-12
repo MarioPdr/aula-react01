@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import UniformeImagem1 from "./uniforme1.jfif";
 import UniformeImagem2 from "./uniforme2.jfif";
+import './StyleUniforme.css';
 
 const uniformes = [
   { id: 1, name: 'Uniforme A', image: UniformeImagem1 },
@@ -18,8 +19,8 @@ const Uniforme = () => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', maxWidth: '80%' }}>
+    <div className="uniforme-container">
+      <div className="uniforme-grid">
         {uniformes.map((uniforme) => (
           <Card key={uniforme.id} sx={{ maxWidth: 200 }}>
             <CardMedia component="img" height="140" image={uniforme.image} alt={uniforme.name} />
