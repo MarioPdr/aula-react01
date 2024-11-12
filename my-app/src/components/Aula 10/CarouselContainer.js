@@ -28,8 +28,6 @@ const CarouselContainer = () => {
           <img src={Imagem3} alt="Slide 3" />
         </div>
       </ResponsiveCarousel>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
     </div>
   );
 }
